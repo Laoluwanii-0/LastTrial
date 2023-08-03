@@ -1,9 +1,9 @@
 {
     "version":2,
-"builds":[{
-    "src":"AssignmentSystem/wsgi.py",
-    "use":"@vercel/python",
-    "config":{"maxLambdaSize": "15mb", "runtime":"Python 3.11.4"}
+    "builds":[{
+        "src":"AssignmentSystem/wsgi.py",
+        "use":"@vercel/python",
+        "config":{"maxLambdaSize": "15mb", "runtime":"Python 3.11.4"}
 },
 {
     "src":"build.sh",
@@ -11,7 +11,7 @@
     "config":{"disDir": "staticfiles_build"}
 }
 ],
-    "route":[
+    "routes":[
         {
             "src":"static/(.*)",
             "dest":"/static/$1"
